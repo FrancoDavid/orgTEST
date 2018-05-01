@@ -1,0 +1,25 @@
+{
+  "name": "api-type-2",
+  "version": "1.0.0",
+  "description": "API NODE MYSQL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrancoDavid/API-type-2.git"
+  },
+  "author": "franco david",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FrancoDavid/API-type-2/issues"
+  },
+  "homepage": "https://github.com/FrancoDavid/API-type-2#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0",
+    "mysql": "^2.15.0"
+  }
+}
