@@ -1,0 +1,40 @@
+<ul class="nav justify-content-end">
+        <li class="nav-item">
+         <!--  <a class="nav-link active" href="#"></a> -->
+         <a class="nav-link" href="#!/historial">Historial Doc.</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#!/create">Crear Doc.</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#!/edit">Editar Doc.</a>
+        </li>
+        <li class="nav-item">
+           <a class="nav-link" href="#!/delete">Borrar Doc.</a>
+        </li>
+</ul>
+<div class="container py-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center text-black mb-4">Historial de Documentos</h2>
+            </div>
+        </div>
+        <table class="table table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Num.Folio</th>
+                    <th scope="col">Comprador</th>
+                    <th scope="col">Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="doc in historial">
+                    <th>{{doc.doc_date}}</th>
+                    <td>{{doc.doc_folio}}</td>
+                    <td>{{doc.doc_name_client}}</td>
+                    <td>{{doc.doc_total | currency : $}}</td>
+                  </tr>
+                </tbody>
+              </table>
+</div>

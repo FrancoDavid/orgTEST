@@ -1,0 +1,94 @@
+
+<ul class="nav justify-content-end">
+        <li class="nav-item">
+         <!--  <a class="nav-link active" href="#"></a> -->
+         <a class="nav-link" href="#!/historial">Historial Doc.</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#!/create">Crear Doc.</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#!/edit">Editar Doc.</a>
+        </li>
+        <li class="nav-item">
+           <a class="nav-link" href="#!/delete">Borrar Doc.</a>
+        </li>
+</ul>
+<div class="container py-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center text-black mb-4">Crear Documento</h2>
+                <div class="row">
+                    <div class="col-md-6 mx-auto">
+                        <div class="card rounded-0">
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="inputFecha">Fecha</label>
+                                        <input ng-model="docData.doc_date" type="date" class="form-control" id="inputDate">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="inputFolio">Num.Folio</label>
+                                            <input ng-model="docData.doc_folio" type="number" class="form-control" id="inputFolio" placeholder="Ingrese Num.Folio">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputClient">Nombre Comprador</label>
+                                            <input ng-model="docData.doc_name_client" type="text" class="form-control" id="inputClient" placeholder="Ingrese Nombre Comprador">
+                                    </div>
+                                    <hr>
+                                    <label>Detalle:</label>
+                                    <div class="card rounded-0">
+                                        <div class="card-body">
+                                            <div class="form-row">    
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputUnit">Unidad Medida</label>
+                                                        <select ng-model="docData.detail_unit" id="inputUnit" class="form-control">
+                                                            <option selected>Seleccione...</option>
+                                                            <option value="kg">Kg</option>
+                                                            <option value="lts">Lts</option>
+                                                        </select>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputAmount">Cantidad</label>
+                                                    <input ng-blur = "multi(docData.detail_amount, docData.detail_price)"  ng-model="docData.detail_amount" type="number" class="form-control" id="inputAmount" placeholder="Ingrese Cantidad">
+                                                </div>
+                                            </div>
+                                            <div class="form-row">    
+                                                    <div class="form-group col-md-6">
+                                                            <label for="inputPrice">Precio</label>
+                                                            <input ng-blur = "multi(docData.detail_amount, docData.detail_price)" ng-model="docData.detail_price" type="number" class="form-control" id="inputPrice" placeholder="Ingrese Precio">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputDescription">Descripción</label>
+                                                        <input  ng-model="docData.detail_description" type="text" class="form-control" id="inputDescription" placeholder="Ingrese Descripción">
+                                                    </div>
+                                            </div>
+                                            <div class="form-group col-md-12">
+                                                <input disabled ng-model="docData.detail_subtotal" type="text" class="form-control" id="inputSubtotal" placeholder="Sub-Total">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="form-group col-md-12">
+                                            <input disabled ng-model="docData.detail_total" type="text" class="form-control" id="inputTotal" placeholder="Total">
+                                    </div>
+                            </div>   
+                            <button ng-click="create(docData)" class="btn btn-primary">Crear</button>
+                            <button ng-click="clean()"class="btn btn-secundary">Limpiar</button>
+                            </form>
+                            </div>
+                         
+                        </div>
+                      
+    
+                    </div>
+    
+    
+                </div>
+              
+    
+        </div>
+            
+        </div>
